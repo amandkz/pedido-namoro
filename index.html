@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer Namorar Comigo?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc8dd;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #590d22;
+        }
+        button {
+            background-color: #ffb3c1;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Quer namorar comigo?</h1>
+        <button id="simBtn">Sim</button>
+        <button id="naoBtn">Não</button>
+    </div>
+
+    <script>
+        const naoBtn = document.getElementById("naoBtn");
+        const simBtn = document.getElementById("simBtn");
+
+        naoBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - naoBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - naoBtn.offsetHeight);
+            naoBtn.style.position = "absolute";
+            naoBtn.style.left = `${x}px`;
+            naoBtn.style.top = `${y}px`;
+        });
+
+        simBtn.addEventListener("click", () => {
+            alert("Meu amor, eu te amo!");
+        });
+    </script>
+</body>
+</html>
